@@ -13,9 +13,21 @@ task("accounts", "Print all accounts", async (taskArgs, hre) => {
   }
 })
 
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.19",
+
+
+
+  defaultNetwork: "sepolia",
+
+  networks: {
+    hardhat: {
+    },
+    sepolia: {
+      url: process.env.API_KEY,
+      accounts: [process.env.PRIVATE_KEY]
+    }
+  },
 
   paths: {
     sources: "./contracts",
@@ -27,15 +39,4 @@ module.exports = {
   mocha: {
     timeout: 40000
   },
-
-  defaultNetwork: "sepolia",
-
-  networks: {
-    hardhat: {
-    },
-    sepolia: {
-      url: process.env.API_KEY,
-      accounts: [process.env.PRIVATE_KEY]
-    }
-  }
 };
