@@ -19,7 +19,7 @@ module.exports = {
 
 
 
-  defaultNetwork: "sepolia",
+  defaultNetwork: "hardhat",
 
   networks: {
     hardhat: {
