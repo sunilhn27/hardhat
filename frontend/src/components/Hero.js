@@ -22,9 +22,7 @@ function Hero() {
         } else {
             console.error('MetaMask not detected. Please install MetaMask to connect your wallet.');
         }
-
     }
-
     return (
         <section className='my-12'>
             <div className='flex justify-center items-center'>

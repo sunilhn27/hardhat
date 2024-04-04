@@ -18,8 +18,6 @@ describe("Greeter", async () => {
         console.log(await contract.greet())
         await contract.setGreet("Ola Sunil")
         expect(await contract.greet()).to.equal("Ola Sunil")
-
-
     })
 
     it("Should check the new greet Value", async () => {
